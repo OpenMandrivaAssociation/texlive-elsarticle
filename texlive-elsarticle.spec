@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/elsarticle
+# catalog-date 2009-09-18 14:01:48 +0200
+# catalog-license lppl1.2
+# catalog-version 1.20
 Name:		texlive-elsarticle
 Version:	1.20
 Release:	1
@@ -59,6 +65,7 @@ system and elsewhere. It replaces the 10-year-old class elsart.
 #- source
 %doc %{_texmfdistdir}/source/latex/elsarticle/elsarticle.dtx
 %doc %{_texmfdistdir}/source/latex/elsarticle/elsarticle.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -69,3 +76,5 @@ system and elsewhere. It replaces the 10-year-old class elsart.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
