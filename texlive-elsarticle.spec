@@ -18,29 +18,18 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 The class is for typeset journal articles, is accepted for
 submitted articles, both in Elsevier's electronic submission
 system and elsewhere. It replaces the 10-year-old class elsart.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -66,7 +55,6 @@ system and elsewhere. It replaces the 10-year-old class elsart.
 #- source
 %doc %{_texmfdistdir}/source/latex/elsarticle/elsarticle.dtx
 %doc %{_texmfdistdir}/source/latex/elsarticle/elsarticle.ins
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -77,5 +65,3 @@ system and elsewhere. It replaces the 10-year-old class elsart.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
