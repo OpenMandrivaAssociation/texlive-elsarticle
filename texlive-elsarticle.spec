@@ -6,7 +6,7 @@
 # catalog-version 1.20
 Name:		texlive-elsarticle
 Version:	1.20
-Release:	1
+Release:	2
 Summary:	Class for articles for submission to Elsevier journals
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle
