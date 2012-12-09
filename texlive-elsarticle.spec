@@ -65,3 +65,17 @@ system and elsewhere. It replaces the 10-year-old class elsart.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.20-2
++ Revision: 751407
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.20-1
++ Revision: 718322
+- texlive-elsarticle
+- texlive-elsarticle
+- texlive-elsarticle
+- texlive-elsarticle
+
