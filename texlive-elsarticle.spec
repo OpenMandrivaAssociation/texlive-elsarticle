@@ -3,7 +3,7 @@ Version:	70902
 Release:	1
 Summary:	Class for articles for submission to Elsevier journals
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle
 License:	LPPL1.2
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/elsarticle.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/elsarticle.doc.r%{version}.tar.xz
