@@ -1,5 +1,5 @@
 Name:		texlive-elsarticle
-Version:	70902
+Version:	73084
 Release:	1
 Summary:	Class for articles for submission to Elsevier journals
 Group:		Publishing
